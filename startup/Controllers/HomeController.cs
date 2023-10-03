@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using startup.Models;
+using starup.Models;
 using System.Diagnostics;
 
-namespace startup.Controllers
+namespace starup.Controllers
 {
     public class HomeController : Controller
     {
