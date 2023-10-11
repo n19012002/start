@@ -1,6 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-namespace starup.Models
+using System.Diagnostics.Contracts;
+
+namespace startup.Models
 {
     [Table("Menu")]
     public class Menu
