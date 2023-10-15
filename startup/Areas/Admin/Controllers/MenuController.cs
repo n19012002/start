@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using startup.Models;
+using startup.Utilities;
 
 namespace startup.Areas.Admin.Controllers
 {
@@ -122,6 +123,10 @@ namespace startup.Areas.Admin.Controllers
         public IActionResult Index()
         {
             var mnList = _context.Menus.OrderBy(m => m.MenuID).ToList();
+
+            if (!Functions.IsLogin())
+                return RedirectToAction("Index", "Login");
+
             return View(mnList);
         }
     }
