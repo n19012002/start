@@ -74,3 +74,9 @@
         </a>
     </form>
 </main>
+
+@{
+    var summernote = new startup.Areas.Admin.Models.Summernote("#Contents");
+
+}
+<partial name="_Summernote" model="summernote" />
